@@ -10,6 +10,4 @@ fn main() {
 
     const MINUTES: u32 = 59;
     println!("Value of const var: {}", MINUTES);
-
-    
 }
