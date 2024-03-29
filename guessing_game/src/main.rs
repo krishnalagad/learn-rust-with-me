@@ -29,7 +29,6 @@ fn main() {
                 break;
             }
         }
-
         println!("You guessed: {}", guess);
     }
 }
