@@ -9,6 +9,7 @@ fn main() {
     println!("Length of first word in String: {}", word);
 
     let word = first_word(s);
+    println!("{}", s);      // accessible here because its reference and mutability is on.
     println!("First word in String: {}", word);
 }
 
