@@ -1,2 +1,7 @@
 guessing_game/target/** 
+guessing_game/.idea/** 
+guessing_game/.vscode/** 
 practice_rust/target/** 
+practice_rust/.idea/** 
+practice_rust/.vscode/** 
+.vscode/** 
