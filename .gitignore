@@ -5,3 +5,6 @@ practice_rust/target/**
 practice_rust/.idea/** 
 practice_rust/.vscode/** 
 .vscode/** 
+restaurant/.idea/** 
+restaurant/target/** 
+restaurant/.vscode/** 
