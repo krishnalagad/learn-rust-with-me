@@ -27,6 +27,6 @@ fn main() {
     match &rows[2] {
         Cell::Text(str) => println!("Its String: {}", str),
         Cell::Int(val) => println!("Its Integer: {}", val),
-        _ => println!("Its Float")
+        Cell::Float(val) => println!("Its Float: {}", val),
     }
 }
