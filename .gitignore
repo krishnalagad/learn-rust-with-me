@@ -8,3 +8,4 @@ practice_rust/.vscode/**
 restaurant/.idea/** 
 restaurant/target/** 
 restaurant/.vscode/** 
+practice_rust/src/codes/*.txt
