@@ -1,3 +1,4 @@
+use std::fmt::Display;
 use std::ops::Deref;
 #[derive(Debug)]
 enum List {
@@ -7,14 +8,20 @@ enum List {
 
 use List::{Cons, Nil};
 
-struct MySmartPtr<T> {
+struct MySmartPtr<T: Display> {
     data: T
 }
 
-impl <T> Deref for MySmartPtr<T> {
+impl <T: Display> Deref for MySmartPtr<T> {
     type Target = T;
     fn deref(&self) -> &Self::Target {
         &self.data
+    }
+}
+
+impl<T: Display> Drop for MySmartPtr<T> {
+    fn drop(&mut self) {
+        println!("Dropping MySmartPtr with data: {}", self.data);
     }
 }
 /*
@@ -32,4 +39,8 @@ fn main() {
 
     let my_ptr = MySmartPtr { data: 10 };
     println!("Value: {}", *my_ptr);
+
+    let str1 = MySmartPtr { data: String::from("Krishna") };
+    let str2 = MySmartPtr { data: String::from("Lagad") };
+    println!("Smart pointers created!!");
 }
