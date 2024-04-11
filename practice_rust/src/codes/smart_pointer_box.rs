@@ -24,6 +24,7 @@ impl<T: Display> Drop for MySmartPtr<T> {
         println!("Dropping MySmartPtr with data: {}", self.data);
     }
 }
+
 /*
     rustc smart_pointer_box.rs -o app && time ./app && rm app
  */
