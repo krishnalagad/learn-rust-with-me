@@ -16,7 +16,7 @@ fn main() {
 
     let b = List::Con(2, Rc::clone(&a));
     println!("Reference count of a: {}", Rc::strong_count(&a));
-
+    // inner scope
     {
         let c = List::Con(5, Rc::clone(&a));
         println!("Reference count of a in inner scope: {}", Rc::strong_count(&a));
